@@ -1,0 +1,368 @@
+; These are just a few perfluoroalcohols. 
+
+[ bondedtypes ]
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+  1      1       9          1         1             3      1    0
+
+; perfluoromethanol
+[ F3O ]
+ [ atoms ]
+   C      CF3_O    0.265     1
+   O      O       -0.700     1
+   H      H        0.435     1
+ [ bonds ]
+   C   O
+   O   H
+
+; perfluoroethanol
+[ F5O ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF3_C    0.000     1
+ [ bonds ]
+   C1     C2
+   C2     O1
+   O1     H1
+
+; perfluoropropanol
+[ F7O ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+; perfluorobutanol
+[ F9O]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+; perfluoropentanol
+[ F11O ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+; perfluorohexanol
+[ F13O ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   
+ ; perfluoroheptanol
+[ F15O ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF2_C    0.000     1
+   C7     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+; perfluorooctanol
+[ F17O ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF2_C    0.000     1
+   C7     CF2_C    0.000     1
+   C8     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+   C7	C8
+; 1-fluorotelomer alcohols
+; 1:1 FTOH
+ [H1F1]
+  [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CF3_C    0.000     1
+ [ bonds ]
+   C1     C2
+   C2     O1
+   O1     H1  
+; 2:1 FTOH    
+ [H1F2]
+  [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+; 3:1 FTOH
+[ H1F3]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+; 4:1 FTOH
+[ H1F4]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+; 5:1 FTOH
+[ H1F5 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   
+ ; 6:1 FTOH
+[ H1F6 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF2_C    0.000     1
+   C7     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+; 7:1 FTOH
+[ H1F7 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CF2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF2_C    0.000     1
+   C7     CF2_C    0.000     1
+   C8     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+   C7	C8
+; 2-telomers
+; 1:2 FTOH    
+ [H2F1]
+  [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+; 2:2 FTOH
+[ H2F2]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+; 3:2 FTOH
+[ H2F3 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+; 4:2 FTOH
+[ H2F4 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+ ; 5:2 FTOH
+[ H2F5 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF2_C    0.000     1
+   C7     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+; 6:2 FTOH
+[ H2F6 ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CF2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CF2_C    0.000     1
+   C4     CF2_C    0.000     1
+   C5     CF2_C    0.000     1
+   C6     CF2_C    0.000     1
+   C7     CF2_C    0.000     1
+   C8     CF3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+   C7	C8   
+   

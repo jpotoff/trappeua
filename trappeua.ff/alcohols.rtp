@@ -5,7 +5,7 @@
   1      1       3          1         1             3      1    0
 
 ; Methanol
-[ MEO ]
+[ C1OH ]
  [ atoms ]
    C      CH3_O    0.265     1
    O      O       -0.700     1
@@ -15,24 +15,125 @@
    O   H
 
 ; Ethanol
-[ ETO ]
+[ C2OH ]
  [ atoms ]
-   C1     CH3_C    0.000     1
-   C2     CH2_O    0.265     1
-   O      O       -0.700     1
-   H      H        0.435     1
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH3_C    0.000     1
  [ bonds ]
    C1     C2
-   C2     O
-   O      H
+   C2     O1
+   O1     H1
 
-; Last methylene group connected to OH, with OH, in linear alcohols (use with
-; CH2 and CH3 residues in  alkanes.rtp)
-[ CH2O ]
+; propanol
+[ C3OH ]
  [ atoms ]
-   C      CH2_O    0.265     1
-   O      O       -0.700     1
-   H      H        0.435     1
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CH3_C    0.000     1
  [ bonds ]
-   C      O
-   O      H
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+; butanol
+[ C4OH ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CH2_C    0.000     1
+   C4     CH3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+; pentanol
+[ C5OH ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CH2_C    0.000     1
+   C4     CH2_C    0.000     1
+   C5     CH3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+; hexanol
+[ C6OH ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CH2_C    0.000     1
+   C4     CH2_C    0.000     1
+   C5     CH2_C    0.000     1
+   C6     CH3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   
+ ; heptanol
+[ C7OH ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CH2_C    0.000     1
+   C4     CH2_C    0.000     1
+   C5     CH2_C    0.000     1
+   C6     CH2_C    0.000     1
+   C7     CH3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+; octanol
+[ C8OH ]
+ [ atoms ]
+   H1     H        0.435     1
+   O1     O       -0.700     1
+   C1     CH2_O    0.265     1
+   C2     CH2_C    0.000     1
+   C3     CH2_C    0.000     1
+   C4     CH2_C    0.000     1
+   C5     CH2_C    0.000     1
+   C6     CH2_C    0.000     1
+   C7     CH2_C    0.000     1
+   C8     CH3_C    0.000     1
+ [ bonds ]
+   H1	O1
+   O1	C1
+   C1	C2
+   C2	C3
+   C3	C4
+   C4	C5
+   C5	C6
+   C6	C7
+   C7	C8
+   
+
