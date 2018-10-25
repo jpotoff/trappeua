@@ -1,5 +1,9 @@
 # TraPPE-UA and HH-Alkane for GROMACS
 
+10/25/2018
+Modified by Jeff Potoff to include parameters for perfluoroalkanes and alcohols.
+
+======
 James W. Barnett
 jbarnet4@tulane.edu
 
