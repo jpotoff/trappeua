@@ -35,7 +35,8 @@
   CF3  CF3   1	     0.1540    502416.0
   CF3  CF2   1	     0.1540    502416.0
   CF2  CF2   1	     0.1540    502416.0
-
+  CH2  CF2   1	     0.1540    502416.0
+  CH2  CF3   1	     0.1540    502416.0
 [ angletypes ]
 ; i    j    k     func    th0       cth
 ; CHX-[CH2]-CHY
@@ -98,13 +99,13 @@
   H      O  CF3   1	  108.5	    230.12000
   O    CF2  CF3   1	  109.5	    519.65389
   O    CF2  CF2   1	  109.5     519.65389
-  O    CT2  CF2   1	  109.5     519.65389
-  O    CT2  CF3   1	  109.5     519.65389
-  CT2  CT2  CF2   1	  114.0     519.65389
-  CT2  CF2  CF3   1	  114.0     519.65389
+  O    CH2  CF2   1	  109.5     519.65389
+  O    CH2  CF3   1	  109.5     519.65389
+  CH2  CH2  CF2   1	  114.0     519.65389
+  CH2  CF2  CF3   1	  114.0     519.65389
   CF2  CF2  CF3   1	  114.0     519.65389
   CF2  CF2  CF2   1  	  114.0	    519.65389
-  CT2  CF2  CF2   1	  114.0     519.65389
+  CH2  CF2  CF2   1	  114.0     519.65389
 ; SPC water 
   HT     OT     HT      1   109.500    627.600 
   
@@ -196,59 +197,67 @@
   CH   C    O    H    3     1.35991   4.07974   0.00000   -5.43965   0.00000   0.00000
   C    C    O    H    3     1.35991   4.07974   0.00000   -5.43965   0.00000   0.00000
 ; CF3-(CF2)_x-OH (using CHARMM style here)
-;i	j	k	l	type	phi	k_i
-H	O     CF2     CF2     9       0       3.5112
-H	O     CF2     CF2     9       180     -0.4586
-H	O     CF2     CF2     9       0       2.7430
-H	O     CF2     CF3     9       0       3.5112
-H	O     CF2     CF3     9       180     -0.4586
-H	O     CF2     CF3     9       0       2.7430
-H	O     CH2     CF2     9       0       -2.4100
-H	O     CH2     CF2     9       0       4.0744
-H	O     CH2     CF2     9       0       3.7597
-H	O     CH2     CF2     9       0       1.0025
-H	O     CH2     CF3     9       0       -2.4100
-H	O     CH2     CF3     9       0       4.0744
-H	O     CH2     CF3     9       0       3.7597
-H	O     CH2     CF3     9       0       1.0025
-O     CF2     CF2     CF3     9       0       -0.0745
-O     CF2     CF2     CF3     9       0       0.3498
-O     CF2     CF2     CF3     9       0       7.1028
-O     CF2     CF2     CF3     9       0       0.1640
-O     CF2     CF2     CF2     9       0       -0.0745
-O     CF2     CF2     CF2     9       0       0.3498
-O     CF2     CF2     CF2     9       0       7.1028
-O     CF2     CF2     CF2     9       0       0.1640
-O     CH2     CF2     CF2     9       0       -0.1761
-O     CH2     CF2     CF2     9       180     -0.2527
-O     CH2     CF2     CF2     9       0       9.8224
-O     CH2     CF2     CF3     9       0       -0.1761
-O     CH2     CF2     CF3     9       180     -0.2527
-O     CH2     CF2     CF3     9       0       9.8224
-O     CH2     CH2     CF2     9       0       6.6739
-O     CH2     CH2     CF2     9       180     -4.5216
-O     CH2     CH2     CF2     9       0       6.9015
-CF2   CF2     CF2     CF3     9       0       6.6442
-CF2   CF2     CF2     CF3     9       180     -2.7117
-CF2   CF2     CF2     CF3     9       0       7.1630
-CF2   CF2     CF2     CF3     9       180     -2.8414
-CF2   CF2     CF2     CF2     9       0       6.6442
-CF2   CF2     CF2     CF2     9       180     -2.7117
-CF2   CF2     CF2     CF2     9       0       7.1630
-CF2   CF2     CF2     CF2     9       180     -2.8414
-CH2   CF2     CF2     CF2     9       0       6.6442
-CH2   CF2     CF2     CF2     9       180     -2.7117
-CH2   CF2     CF2     CF2     9       0       7.1630
-CH2   CF2     CF2     CF2     9       180     -2.8414
-CH2   CF2     CF2     CF3     9       0       6.6442
-CH2   CF2     CF2     CF3     9       180     -2.7117
-CH2   CF2     CF2     CF3     9       0       7.1630
-CH2   CF2     CF2     CF3     9       180     -2.8414
-CH2   CH2     CF2     CF2     9       0       3.7426
-CH2   CH2     CF2     CF2     9       180     -2.4221
-CH2   CH2     CF2     CF2     9       0       7.7843
-CH2   CH2     CF2     CF2     9       180     -0.6837
-CH2   CH2     CF2     CF3     9       0       3.7426
-CH2   CH2     CF2     CF3     9       180     -2.4221
-CH2   CH2     CF2     CF3     9       0       7.7843
-CH2   CH2     CF2     CF3     9       180     -0.6837
+;i	j	k	l	type	phi	k_i	n_i
+;alcohols and 2-telomers
+O	CH2	CH2	CH2 	9	0	2.9137	1
+O	CH2	CH2	CH2	9	180    -2.5799	2
+O	CH2	CH2	CH2	9	0	8.4433	3
+H	O	CH2	CH2	9	0	1.9104	1
+H	O	CH2	CH2	9	180    -0.6883	2
+H	O	CH2	CH2	9	0	2.3979	3
+;perfluoroalchols
+H	O     CF2     CF2     9       0       3.5112	1
+H	O     CF2     CF2     9       180     -0.4586	2
+H	O     CF2     CF2     9       0       2.7430	3
+H	O     CF2     CF3     9       0       3.5112	1
+H	O     CF2     CF3     9       180     -0.4586	2
+H	O     CF2     CF3     9       0       2.7430	3
+H	O     CH2     CF2     9       0       -2.4100	1
+H	O     CH2     CF2     9       0       4.0744	2
+H	O     CH2     CF2     9       0       3.7597	3
+H	O     CH2     CF2     9       0       1.0025	4
+H	O     CH2     CF3     9       0       -2.4100	1
+H	O     CH2     CF3     9       0       4.0744	2
+H	O     CH2     CF3     9       0       3.7597	3
+H	O     CH2     CF3     9       0       1.0025	4
+O     CF2     CF2     CF3     9       0       -0.0745	1
+O     CF2     CF2     CF3     9       0       0.3498	2
+O     CF2     CF2     CF3     9       0       7.1028	3
+O     CF2     CF2     CF3     9       0       0.1640	4
+O     CF2     CF2     CF2     9       0       -0.0745	1
+O     CF2     CF2     CF2     9       0       0.3498	2
+O     CF2     CF2     CF2     9       0       7.1028	3
+O     CF2     CF2     CF2     9       0       0.1640	4
+O     CH2     CF2     CF2     9       0       -0.1761	1
+O     CH2     CF2     CF2     9       180     -0.2527	2
+O     CH2     CF2     CF2     9       0       9.8224	3
+O     CH2     CF2     CF3     9       0       -0.1761	1
+O     CH2     CF2     CF3     9       180     -0.2527	2
+O     CH2     CF2     CF3     9       0       9.8224	3
+O     CH2     CH2     CF2     9       0       6.6739	1
+O     CH2     CH2     CF2     9       180     -4.5216	2
+O     CH2     CH2     CF2     9       0       6.9015	3
+CF2   CF2     CF2     CF3     9       0       6.6442	1
+CF2   CF2     CF2     CF3     9       180     -2.7117	2
+CF2   CF2     CF2     CF3     9       0       7.1630	3
+CF2   CF2     CF2     CF3     9       180     -2.8414	4
+CF2   CF2     CF2     CF2     9       0       6.6442	1
+CF2   CF2     CF2     CF2     9       180     -2.7117	2
+CF2   CF2     CF2     CF2     9       0       7.1630	3
+CF2   CF2     CF2     CF2     9       180     -2.8414	4
+CH2   CF2     CF2     CF2     9       0       6.6442	1
+CH2   CF2     CF2     CF2     9       180     -2.7117	2
+CH2   CF2     CF2     CF2     9       0       7.1630	3
+CH2   CF2     CF2     CF2     9       180     -2.8414	4
+CH2   CF2     CF2     CF3     9       0       6.6442	1
+CH2   CF2     CF2     CF3     9       180     -2.7117	2
+CH2   CF2     CF2     CF3     9       0       7.1630	3
+CH2   CF2     CF2     CF3     9       180     -2.8414	4
+CH2   CH2     CF2     CF2     9       0       3.7426	1
+CH2   CH2     CF2     CF2     9       180     -2.4221	2
+CH2   CH2     CF2     CF2     9       0       7.7843	3
+CH2   CH2     CF2     CF2     9       180     -0.6837	4
+CH2   CH2     CF2     CF3     9       0       3.7426	1
+CH2   CH2     CF2     CF3     9       180     -2.4221	2
+CH2   CH2     CF2     CF3     9       0       7.7843	3
+CH2   CH2     CF2     CF3     9       180     -0.6837	4

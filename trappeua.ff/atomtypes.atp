@@ -9,3 +9,7 @@
   CH_C      13.01900 ; CH attached to any carbon group
   C_O       12.01100 ; Single carbon attached to an oxygen
   C_C       12.01100 ; Single carbon attached to any carbon group
+  OT	    15.99940 ; Oxygen for water
+  HT	     1.00800 ; Hydrogen for water
+  OT2	    15.99940 ; Oxygen for water
+  HT2	     1.00800 ; Hydrogen for water
