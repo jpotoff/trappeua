@@ -3,8 +3,10 @@
 10/25/2018
 Modified by Jeff Potoff to include parameters for perfluoroalkanes and alcohols.
 
-11/26/2018: replaced all torsions with CHARMM style (type 9) to be consistent with 
+11/26/2018 
+replaced all torsions with CHARMM style (type 9) to be consistent with 
 GOMC, NAMD and CHARMM, and make the parameters more portable between codes.  
+
 ======
 James W. Barnett
 jbarnet4@tulane.edu
